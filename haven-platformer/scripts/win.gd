@@ -12,5 +12,5 @@ func _process(delta: float) -> void:
 	time += delta;
 	self.position.y = startY + sin(time * 3) * 5;
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
+func _on_area_2d_body_entered(_body: Node2D) -> void:
 	LevelManager.next();

@@ -1,19 +1,17 @@
 extends Node
 
 var currentLevel := 1;
-var maxLevels := 2;
+var maxLevels := 3;
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func _ready():
+	update_scene();
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-	
 func next() -> void:
 	currentLevel = currentLevel % maxLevels + 1;
-	get_tree().change_scene_to_file("res://scenes/level%d.tscn" % currentLevel);
+	update_scene();
 
 func die() -> void:
+	update_scene();
+
+func update_scene():
 	get_tree().change_scene_to_file("res://scenes/level%d.tscn" % currentLevel);

@@ -1,13 +1,10 @@
 extends CharacterBody2D
 
 @export var ALLOW_JUMP := true;
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const SPEED = 250.0
+const JUMP_VELOCITY = -350.0
 
 func _physics_process(delta: float) -> void:
-	if self.position.y > 400:
-		LevelManager.die();
-	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -25,3 +22,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+func _process(_delta: float) -> void:
+	if self.position.y > 400:
+		LevelManager.die();
