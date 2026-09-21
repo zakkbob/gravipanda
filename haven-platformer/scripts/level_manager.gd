@@ -1,6 +1,6 @@
 extends Node
 
-var currentLevel := 5;
+var currentLevel := 1;
 var maxLevels := 5;
 
 func _ready():

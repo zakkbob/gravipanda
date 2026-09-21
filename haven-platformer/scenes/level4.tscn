@@ -13,6 +13,9 @@ texture = ExtResource("2_u23xw")
 physics_layer_0/collision_layer = 1
 sources/4 = SubResource("TileSetAtlasSource_yqkch")
 
+[sub_resource type="LabelSettings" id="LabelSettings_jdh7w"]
+font_size = 10
+
 [node name="Node2D" type="Node2D" unique_id=12447800]
 
 [node name="Node2D" parent="." unique_id=279389345 instance=ExtResource("1_8y2od")]
@@ -24,3 +27,21 @@ tile_set = SubResource("TileSet_6ep0u")
 
 [node name="Node2D2" parent="." unique_id=834570895 instance=ExtResource("3_kq3r6")]
 position = Vector2(981, 341)
+
+[node name="Label" type="Label" parent="." unique_id=1080322576]
+offset_left = 130.0
+offset_top = 172.0
+offset_right = 352.0
+offset_bottom = 221.0
+text = "You can also defy gravity 
+if you feel like it"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Label" unique_id=1732372501]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 65.0
+offset_right = 167.0
+offset_bottom = 88.0
+text = "(s/down to defy gravity)"
+label_settings = SubResource("LabelSettings_jdh7w")

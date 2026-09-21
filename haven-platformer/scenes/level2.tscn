@@ -13,7 +13,19 @@ texture = ExtResource("2_2k3dv")
 physics_layer_0/collision_layer = 1
 sources/4 = SubResource("TileSetAtlasSource_yqkch")
 
+[sub_resource type="LabelSettings" id="LabelSettings_m7ahb"]
+font_size = 10
+
 [node name="Node2D" type="Node2D" unique_id=12447800]
+
+[node name="Label" type="Label" parent="." unique_id=326630925]
+offset_left = 165.0
+offset_top = 136.0
+offset_right = 437.0
+offset_bottom = 185.0
+text = "Did I mention that you could jump?
+Well, you can"
+horizontal_alignment = 1
 
 [node name="Node2D" parent="." unique_id=279389345 instance=ExtResource("1_4038r")]
 position = Vector2(66, 171)
@@ -24,3 +36,18 @@ tile_set = SubResource("TileSet_6ep0u")
 
 [node name="Node2D2" parent="." unique_id=834570895 instance=ExtResource("3_alqfr")]
 position = Vector2(1565, 258)
+
+[node name="Label2" type="Label" parent="." unique_id=191592863]
+offset_left = 1187.0
+offset_top = 136.0
+offset_right = 1304.0
+offset_bottom = 159.0
+text = "Try not to fall..."
+
+[node name="Label3" type="Label" parent="." unique_id=192525554]
+offset_left = 252.0
+offset_top = 196.0
+offset_right = 378.0
+offset_bottom = 219.0
+text = "(space/w/up to jump)"
+label_settings = SubResource("LabelSettings_m7ahb")
