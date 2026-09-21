@@ -14,3 +14,6 @@ func _process(delta: float) -> void:
 func next() -> void:
 	currentLevel = currentLevel % maxLevels + 1;
 	get_tree().change_scene_to_file("res://scenes/level%d.tscn" % currentLevel);
+
+func die() -> void:
+	get_tree().change_scene_to_file("res://scenes/level%d.tscn" % currentLevel);
