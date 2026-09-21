@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://0utow5tq45ey"]
+
+[ext_resource type="Texture2D" uid="uid://bfqe18sg0cd80" path="res://assets/golden-bamboo.png" id="1_826fv"]
+[ext_resource type="Script" uid="uid://ugv3mpgdg5hm" path="res://scripts/win.gd" id="2_iiocm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yxbqr"]
+size = Vector2(16, 16)
+
+[node name="Node2D" type="Node2D" unique_id=834570895]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1306302630]
+
+[node name="Win" type="Sprite2D" parent="Area2D" unique_id=817096361]
+texture = ExtResource("1_826fv")
+script = ExtResource("2_iiocm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=763777608]
+shape = SubResource("RectangleShape2D_yxbqr")
+
+[connection signal="body_entered" from="Area2D" to="Area2D/Win" method="_on_area_2d_body_entered"]
