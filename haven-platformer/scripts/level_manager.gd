@@ -1,7 +1,7 @@
 extends Node
 
-var currentLevel := 1;
-var maxLevels := 3;
+var currentLevel := 5;
+var maxLevels := 5;
 
 func _ready():
 	update_scene();
