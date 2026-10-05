@@ -10,5 +10,5 @@ There is a web version available at [itch.io](https://zakkbob.itch.io/gravipanda
 | button|action |
 |--|--|
 | a / d / arrows | move left/right |
-|space | jump |
+|space / up arrow | jump |
 |s / down arrow | reverse gravity|
